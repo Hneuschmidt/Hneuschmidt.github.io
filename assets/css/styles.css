@@ -1,0 +1,13 @@
+.current { color: green; }
+
+img { max-height: 80%; width: 100%; }
+
+h1 { font-size: 40px; }
+
+h2 { font-size: 35px; }
+
+p { font-size: 30px; text-align: justify; }
+
+body { margin-left: 20%; margin-right: 20%; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"styles.scss",
+		"_sass/main.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\"\n",
+		".current {\n    color: green;\n}\n\n\nimg {  \n    max-height: 80%;\n    width: 100%;\n}  \n\nh1 {\n    font-size: 40px;\n}\n\nh2 {\n    font-size: 35px;\n}\n\np {\n    font-size: 30px;\n    text-align: justify;\n}\n\nbody {\n    margin-left: 20%;\n    margin-right: 20%;\n}\n\n"
+	],
+	"names": [],
+	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACL,KAAK,EAAE,KAAK,GACf;;AAGD,AAAA,GAAG,CAAC,EACA,UAAU,EAAE,GAAG,EACf,KAAK,EAAE,IAAI,GACd;;AAED,AAAA,EAAE,CAAC,EACC,SAAS,EAAE,IAAI,GAClB;;AAED,AAAA,EAAE,CAAC,EACC,SAAS,EAAE,IAAI,GAClB;;AAED,AAAA,CAAC,CAAC,EACE,SAAS,EAAE,IAAI,EACf,UAAU,EAAE,OAAO,GACtB;;AAED,AAAA,IAAI,CAAC,EACD,WAAW,EAAE,GAAG,EAChB,YAAY,EAAE,GAAG,GACpB"
+}
