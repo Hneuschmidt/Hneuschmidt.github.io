@@ -1,13 +1,25 @@
+:root { --font-size: 30px; }
+
 .current { color: green; }
 
-img { max-height: 80%; width: 100%; }
+img { width: auto; height: auto; max-height: 100%; max-width: 100%; object-fit: cover; }
+
+.big_img { max-height: 80%; width: 100%; }
+
+.small_img { max-height: 20%; width: 20%; text-align: centered; }
 
 h1 { font-size: 40px; }
 
 h2 { font-size: 35px; }
 
-p { font-size: 30px; text-align: justify; }
+h3 { font-size: var(--font-size); }
+
+p { font-size: var(--font-size); text-align: justify; }
+
+li { font-size: var(--font-size); }
 
 body { margin-left: 20%; margin-right: 20%; }
+
+.leftButton, .rightButton { background-color: #aaaaaa; border: none; color: white; text-align: center; text-decoration: none; display: inline-block; font-size: var(--font-size); height: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

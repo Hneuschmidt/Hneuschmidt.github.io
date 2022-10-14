@@ -28,7 +28,7 @@
         <h1>Ankunft</h1>
 <p> 24 Sep 2022 - hannes </p>
 
-<h1 id="auf-nach-japan">Auf nach Japan!</h1>
+<h2 id="auf-nach-japan">Auf nach Japan!</h2>
 
 <p>Das Visum ist rechtzeitig angekommen. In den letzten Tagen war es noch unheimlich spannend, ob ich nicht doch noch den Flug umbuchen muss,
 weil die notwendigen Dokumente von der Universität (<a href="http://www.tohoku.ac.jp/en/">Tohoku University [en/jp]</a>) erst sehr kurzfristig eingetroffen sind.
@@ -48,7 +48,7 @@ Trotz der langen Schlange für das Handgepäck (ca. 1 Stunde) die viel Gelegenhe
 Es gibt sogar Frühstück und Getränke! Verpflegung hatte ich eigentlich nur für den langen Flug erwartet und das Essen ist sogar einigermaßen genießbar.
 Trotzdem gönne ich mir zum Frühstück leckere Pierogi.</p>
 
-<p><img class="singleImage" src="/assets/images/2022-09-24-ankunft/20220917_091510.jpg" height="" /></p>
+<p><img class="big_img" src="/assets/images/2022-09-24-ankunft/20220917_091510.jpg" height="" /></p>
 
 <p>Für den Anschlussflug nach Tokio startet das Boarding zwar rechtzeitig, allerdings bekommen wir etwa 1 Stunde Verspätung dadurch, dass wir auf das
 Gepäck warten müssen. Hoffentlich bedeutet das, dass mein Gepäck auch tatsächlich mit uns fliegt…</p>
@@ -89,20 +89,77 @@ Um 11:30 (JST) bin ich mit Kengo, Moekas Freund, in der Innenstadt verabredet. E
 Beim Hotel angekommen, habe ich nur wenig Zeit und packe so schnell ich kann die nötigsten Dinge in meine Tasche: ein frisches T-Shirt, Deo, Regenjacke, Kamera.
 Richtig einchecken kann ich erst später. Nun laufe ich zur UBahn, um noch rechtzeitig zum Treffpunkt zu kommen…</p>
 
-<div id="gallery">
-    <button class="leftButton" onclick="plusDivs(-1)">❮</button>
-    <button class="rightButton" onclick="plusDivs(1)">❯</button>
-    
-        <img class="mySlides" src="/assets/images/2022-09-24-ankunft/20220917_052724.jpg" height="" />
-    
-        <img class="mySlides" src="/assets/images/2022-09-24-ankunft/20220918_074800.jpg" height="" />
-    
-        <img class="mySlides" src="/assets/images/2022-09-24-ankunft/20220918_082439.jpg" height="" />
-    
-        <img class="mySlides" src="/assets/images/2022-09-24-ankunft/20220918_182645.jpg" height="" />
-    
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        overflow: auto;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        justify-content: center;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+</style>
+
+<div>
+    <div class="grid-container">
+        <div class="lbc">
+            <button class="leftButton" onclick="plusDivs(-1)">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_" src="/assets/images/2022-09-24-ankunft/20220917_052724.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_" src="/assets/images/2022-09-24-ankunft/20220918_074800.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_" src="/assets/images/2022-09-24-ankunft/20220918_082439.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_" src="/assets/images/2022-09-24-ankunft/20220918_182645.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button class="rightButton" onclick="plusDivs(1)">❯</button>
+        </div>
+    </div>
 </div>
 
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
 <script>
     var slideIndex = 1;
     showDivs(slideIndex);
@@ -111,7 +168,8 @@ Richtig einchecken kann ich erst später. Nun laufe ich zur UBahn, um noch recht
 
     function showDivs(n) {
         var i;
-        var x = document.getElementsByClassName("mySlides");
+        var x = document.getElementsByClassName("mySlides_");
+        console.log(":", x.length)
         if (n > x.length) {slideIndex = 1}
         if (n < 1) {slideIndex = x.length}
         for (i = 0; i < x.length; i++) {

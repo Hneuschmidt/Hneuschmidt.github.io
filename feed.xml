@@ -1,4 +1,287 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-02T22:48:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Japan Blog</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Ankunft</title><link href="http://localhost:4000/2022/09/24/ankunft.html" rel="alternate" type="text/html" title="Ankunft" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/24/ankunft</id><content type="html" xml:base="http://localhost:4000/2022/09/24/ankunft.html"><![CDATA[<h1 id="auf-nach-japan">Auf nach Japan!</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-14T22:29:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Japan Blog</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Tokio1</title><link href="http://localhost:4000/2022/10/13/Tokio1.html" rel="alternate" type="text/html" title="Tokio1" /><published>2022-10-13T00:00:00+09:00</published><updated>2022-10-13T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/13/Tokio1</id><content type="html" xml:base="http://localhost:4000/2022/10/13/Tokio1.html"><![CDATA[<h2 id="der-erste-abend">Der erste Abend</h2>
+
+<p>Moekas Freund, Kengo (賢吾) soll mich am Bahnhof Mitsukoshimae (三越前駅) abholen,
+damit ich den Veranstaltungsort finden kann.
+Dadurch, dass die U-Bahn so spät losgefahren ist und ich von der Bahnstation
+in der Nähe des Hotels, Ueno (上野駅), eine Weile suchen musste, bis ich das Hotel
+gefunden habe, bin ich jetzt ziemlich in Eile.
+Ich schaffe es am Ende sogar ein paar Minuten vorher da zu sein,
+obwohl Moeka mich im Laufe des Morgens gebeten hatte, doch lieber 10 Minuten
+früher zu kommen, als ursprünglich geplant.
+Es hilft ungemein, dass das Tokioter U-Bahn-System auch ohne Japanischkenntnisse
+gut zu navigieren ist. Überall gibt es Schilder, Ansagen und Ticketautomaten
+auf Englisch.</p>
+
+<p>Am Bahnhof bin ich den Japanern enorm dankbar, dass es an jeder U-Bahn-Station
+eine öffentliche Toilette zu geben scheint. Die Toiletten sind für
+deutsche Maßstäbe sehr sauber (insbesondere im Anbetracht dessen, dass sie
+kostenlos sind!).
+Die Art der Toilette variiert recht stark, von der japanischen Hightech Toilette
+mit Toilettensitzheizung und Bidet bis zur Hocktoilette.
+Für mich bietet sich aber hier vor allem die Gelegenheit, mich ein bisschen
+notdürftig zu waschen und ein neues T-Shirt anzuziehen.
+Immerhin habe ich heute schon 14 Stunden im Flugzeug gesessen und soll jetzt
+gleich unter Leute kommen und neue Leute kennenlernen.</p>
+
+<h3 id="japanische-toiletten">Japanische Toiletten</h3>
+
+<div style="width: 60%; display: block; margin-left: auto; margin-right: auto;">
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        overflow: auto;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        justify-content: center;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+</style>
+<div id="toilets">
+    <div class="grid-container">
+        <div class="lbc">
+            <button class="leftButton" onclick="plusDivs(-1)">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_toilets" src="/assets/images/2022-10-13-tokio1/nice_toilet.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_toilets" src="/assets/images/2022-10-13-tokio1/squat_toilet.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button class="rightButton" onclick="plusDivs(1)">❯</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {showDivs(slideIndex += n);}
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides_toilets");
+        console.log("toilets:", x.length)
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+</script>
+
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fCTKDn3Q8xQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+</div>
+
+<p>Jetzt, wo ich wieder einigermaßen vorzeigbar bin, mache ich mich auf die Suche
+nach Kengo. Ein sehr freundlicher und mit meinem Japanisch geduldiger Herr an
+der Information erklärt mir, dass ich zufällig schon genau an der Stelle bin,
+die mir als Treffpunkt beschrieben wurde.</p>
+
+<p>Ich erkenne Kengo, den ich vor ein paar Tagen das erste Mal über Skype
+gesehen habe. Daran, dass er mich erkennen würde, gibt es keinen Zweifel,
+die Homogenität der japanischen Bevölkerung ist ziemlich sichtbar, schließlich
+gibt es aktuell nicht mal ausländische Touristen im Land.
+Hier und da sieht man mal die eine oder andere Person mit nicht typisch
+japanischem Äußeren, aber das ist schon recht selten.
+Der Kontrast zu Hamburg in dieser Hinsicht ist ziemlich frappierend.</p>
+
+<p>Mitsukoshimae befindet sich quasi im Keller eines Hochhauses.
+Die Veranstaltung findet in einem Cafe in diesem Hochhaus statt.
+Wir stehen auf der Gästeliste und haben einen Platz in der ersten Reihe.
+Auf dem Platz liegt ein Menü und eine “Anleitung” für den Nachmittag.
+Es gibt eine Zaubershow am Tisch, eine Zaubershow auf der Bühne und
+Improvisationstheater. Außerdem bekommt man etwas zu essen und ein Getränk.
+Noch bevor die Vorstellung beginnt, kommt der Zauberer zu mir und bittet mich
+ihm später als Freiwilliger bei der Zaubershow zu unterstützen.
+Ob er denn nun Japanisch oder Englisch mit mir sprechen solle?
+Vor Publikum dann doch lieber Englisch…</p>
+
+<p>Am Tisch gibt es allerlei Kartentricks und “sleight of hand”.
+DAI (der Zauberer) geht von einer Tischgruppe und unterhält das
+Publikum sehr gut beim Essen.
+Die Bühnenshow beinhaltet vor allem eine Menge Kunststücke mit
+verketteten Ringen und farbigen Tüchern, die sich in Regenschirme
+und zurück verwandeln.</p>
+
+<p>Ein weiterer Abschnitt beinhaltet
+ein magisches Seil, das, in der Mitte zerschnitten, plötzlich
+aus zwei ganz unterschiedlich langen Teilen besteht.
+Auch kann es, wieder in der Mitte geschnitten, wieder zusammengeknotet
+werden, sodass am Ende ein langes Seil ohne Knoten und
+ein kurzes Stück mit nur dem Knoten übrigbleiben.
+Bei diesem Teil bin ich als Assistent dafür zuständig, das Seil mit
+einer Schere zu zerschneiden und gelegentlich die Ergebnisse
+zu präsentieren.
+Alles ein großer Spaß!</p>
+
+<p>Moeka ist bei dieser Veranstaltung für die Musik zuständig.
+Sie spielt Klavier und elektronisches Marimba (wer hat sowas schonmal gesehen?).
+Dabei untermalt sie die Zaubershow, gelegentlich unterstützt von einem backing track,
+mit ganz unterschiedlichen Stücken von Klassik bis “Over the rainbow”.
+Den beeindruckendsten Auftritt hat sie aber im letzten Teil.
+Während 4 Schauspieler, einer davon DAI, in verschiedenen Spielen
+diverse Szenen improvisieren, improvisiert sie die dazu passende Musik.
+Insgesamt ist die ganze Sache musikalisch sehr beeindruckend,
+da die Schauspieler immer wieder improvisierte Texte zu
+der Szene singen, teils auch mehrstimmig!
+Eins der Spiele basiert sogar hauptsächlich auf diesem Konzept,
+sie nennen es: “Make a song about it!” und eine Szene, in der
+eine der Figuren aus unerklärlichen Gründen nach Hamburg ziehen möchte,
+wird mit immer einer anderen vorgegebenen Emotion vertont.
+Dabei werden folgende Aspekte der Stadt herausgearbeitet:</p>
+
+<ul>
+  <li>Sie ist sehr weit weg</li>
+  <li>Das Wetter ist schlecht</li>
+  <li>Es gibt dort bestimmt gute Hamburger</li>
+</ul>
+
+<p>Es ist etwas schwierig, die anderen Szenen wiederzugeben, weil
+ich nur in Ansätzen verstehen kann, worum es geht.
+Aber glücklicherweise verstehe ich genug, um unheimlich viel Spaß zu haben!
+Es wird wohl im Oktober noch eine Vorstellung geben,
+es wäre wirklich klasse, wenn ich da auch hingehen könnte.</p>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        overflow: auto;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        justify-content: center;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+</style>
+
+<div id="slideshow">
+    <div class="grid-container">
+        <div class="lbc">
+            <button class="leftButton" onclick="plusDivs(-1)">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_slideshow" src="/assets/images/2022-10-13-tokio1/show2.jpeg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_slideshow" src="/assets/images/2022-10-13-tokio1/show1.jpeg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_slideshow" src="/assets/images/2022-10-13-tokio1/show4.jpeg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_slideshow" src="/assets/images/2022-10-13-tokio1/show7.jpeg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_slideshow" src="/assets/images/2022-10-13-tokio1/show6.jpeg" />
+            </div>
+        
+        <div class="rbc">
+            <button class="rightButton" onclick="plusDivs(1)">❯</button>
+        </div>
+    </div>
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {showDivs(slideIndex += n);}
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides_slideshow");
+        console.log("slideshow:", x.length)
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+</script>
+
+<p>Nach dem gemeinsamen Essen, inklusive intensiver Japanisch-Übung –
+Kengo spricht etwas Englisch und Moeka kann Deutsch, aber nicht
+andersherum – gehe ich nach ca. 37 Stunden endlich schlafen.</p>]]></content><author><name>Hannes</name></author><summary type="html"><![CDATA[Der erste Abend]]></summary></entry><entry><title type="html">Ankunft</title><link href="http://localhost:4000/2022/09/24/ankunft.html" rel="alternate" type="text/html" title="Ankunft" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/2022/09/24/ankunft</id><content type="html" xml:base="http://localhost:4000/2022/09/24/ankunft.html"><![CDATA[<h2 id="auf-nach-japan">Auf nach Japan!</h2>
 
 <p>Das Visum ist rechtzeitig angekommen. In den letzten Tagen war es noch unheimlich spannend, ob ich nicht doch noch den Flug umbuchen muss,
 weil die notwendigen Dokumente von der Universität (<a href="http://www.tohoku.ac.jp/en/">Tohoku University [en/jp]</a>) erst sehr kurzfristig eingetroffen sind.
@@ -18,7 +301,7 @@ Trotz der langen Schlange für das Handgepäck (ca. 1 Stunde) die viel Gelegenhe
 Es gibt sogar Frühstück und Getränke! Verpflegung hatte ich eigentlich nur für den langen Flug erwartet und das Essen ist sogar einigermaßen genießbar.
 Trotzdem gönne ich mir zum Frühstück leckere Pierogi.</p>
 
-<p><img class="singleImage" src="/assets/images/2022-09-24-ankunft/20220917_091510.jpg" height="" /></p>
+<p><img class="big_img" src="/assets/images/2022-09-24-ankunft/20220917_091510.jpg" height="" /></p>
 
 <p>Für den Anschlussflug nach Tokio startet das Boarding zwar rechtzeitig, allerdings bekommen wir etwa 1 Stunde Verspätung dadurch, dass wir auf das
 Gepäck warten müssen. Hoffentlich bedeutet das, dass mein Gepäck auch tatsächlich mit uns fliegt…</p>
@@ -59,20 +342,77 @@ Um 11:30 (JST) bin ich mit Kengo, Moekas Freund, in der Innenstadt verabredet. E
 Beim Hotel angekommen, habe ich nur wenig Zeit und packe so schnell ich kann die nötigsten Dinge in meine Tasche: ein frisches T-Shirt, Deo, Regenjacke, Kamera.
 Richtig einchecken kann ich erst später. Nun laufe ich zur UBahn, um noch rechtzeitig zum Treffpunkt zu kommen…</p>
 
-<div id="gallery">
-    <button class="leftButton" onclick="plusDivs(-1)">❮</button>
-    <button class="rightButton" onclick="plusDivs(1)">❯</button>
-    
-        <img class="mySlides" src="/assets/images/2022-09-24-ankunft/20220917_052724.jpg" height="" />
-    
-        <img class="mySlides" src="/assets/images/2022-09-24-ankunft/20220918_074800.jpg" height="" />
-    
-        <img class="mySlides" src="/assets/images/2022-09-24-ankunft/20220918_082439.jpg" height="" />
-    
-        <img class="mySlides" src="/assets/images/2022-09-24-ankunft/20220918_182645.jpg" height="" />
-    
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        overflow: auto;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        justify-content: center;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+</style>
+
+<div>
+    <div class="grid-container">
+        <div class="lbc">
+            <button class="leftButton" onclick="plusDivs(-1)">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_" src="/assets/images/2022-09-24-ankunft/20220917_052724.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_" src="/assets/images/2022-09-24-ankunft/20220918_074800.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_" src="/assets/images/2022-09-24-ankunft/20220918_082439.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_" src="/assets/images/2022-09-24-ankunft/20220918_182645.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button class="rightButton" onclick="plusDivs(1)">❯</button>
+        </div>
+    </div>
 </div>
 
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
 <script>
     var slideIndex = 1;
     showDivs(slideIndex);
@@ -81,7 +421,8 @@ Richtig einchecken kann ich erst später. Nun laufe ich zur UBahn, um noch recht
 
     function showDivs(n) {
         var i;
-        var x = document.getElementsByClassName("mySlides");
+        var x = document.getElementsByClassName("mySlides_");
+        console.log(":", x.length)
         if (n > x.length) {slideIndex = 1}
         if (n < 1) {slideIndex = x.length}
         for (i = 0; i < x.length; i++) {
