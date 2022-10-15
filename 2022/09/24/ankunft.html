@@ -130,7 +130,7 @@ Richtig einchecken kann ich erst später. Nun laufe ich zur UBahn, um noch recht
 <div>
     <div class="grid-container">
         <div class="lbc">
-            <button class="leftButton" onclick="plusDivs(-1)">❮</button>
+            <button id="left_button_" class="leftButton">❮</button>
         </div>
         
             <div class="slide-item">
@@ -150,7 +150,7 @@ Richtig einchecken kann ich erst später. Nun laufe ich zur UBahn, um noch recht
             </div>
         
         <div class="rbc">
-            <button class="rightButton" onclick="plusDivs(1)">❯</button>
+            <button id="right_button_" class="rightButton">❯</button>
         </div>
     </div>
 </div>
@@ -161,22 +161,38 @@ Richtig einchecken kann ich erst später. Nun laufe ich zur UBahn, um noch recht
     multiple slideshows
 -->
 <script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
+        var slideIndex = 1;
+        showDivs(slideIndex);
 
-    function plusDivs(n) {showDivs(slideIndex += n);}
+        function plusDivs(n) {showDivs(slideIndex += n);}
 
-    function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides_");
-        console.log(":", x.length)
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides_");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
         }
-        x[slideIndex-1].style.display = "block";
-    }
+</script>
+
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_");
+    right_button = document.getElementById("right_button_");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("");
+    right_button.state = left_button.state;
+
+
+    // attach event listener
+    left_button.addEventListener("click", (e) => {e.currentTarget.state.plusDivs(-1);});
+    right_button.addEventListener("click", (e) => {e.currentTarget.state.plusDivs(1);});
+
 </script>
 
 

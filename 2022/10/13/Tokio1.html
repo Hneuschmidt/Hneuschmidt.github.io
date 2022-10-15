@@ -28,6 +28,32 @@
         <h1>Tokio1</h1>
 <p> 13 Oct 2022 - Hannes </p>
 
+<script>
+    class SlideState {
+        constructor(id) {
+            this.slides = document.getElementsByClassName("mySlides_" + id);
+            this.slide_idx = 1;
+            // TODO
+            console.log("Constructed SlideState with id " + id);
+            this.id = id;
+        }
+
+        showDivs(n) {
+            if (n > this.slides.length) {this.slide_idx = 1;}
+            if (n < 1) {this.slide_idx = this.slides.length;}
+            for (var i = 0; i < this.slides.length; i++) {
+                this.slides[i].style.display = "none";
+            }
+            this.slides[this.slide_idx-1].style.display = "block";
+        }
+
+        plusDivs(n) {
+            this.showDivs(this.slide_idx += n);
+            console.log("Called plusDivs(" + n + ") on " + this.id+ " slideshow");
+        }
+    }
+</script>
+
 <h2 id="der-erste-abend">Der erste Abend</h2>
 
 <p>Moekas Freund, Kengo (賢吾) soll mich am Bahnhof Mitsukoshimae (三越前駅) abholen,
@@ -97,7 +123,7 @@ gleich unter Leute kommen und neue Leute kennenlernen.</p>
 <div id="toilets">
     <div class="grid-container">
         <div class="lbc">
-            <button class="leftButton" onclick="plusDivs(-1)">❮</button>
+            <button id="left_button_toilets" class="leftButton">❮</button>
         </div>
         
             <div class="slide-item">
@@ -109,7 +135,7 @@ gleich unter Leute kommen und neue Leute kennenlernen.</p>
             </div>
         
         <div class="rbc">
-            <button class="rightButton" onclick="plusDivs(1)">❯</button>
+            <button id="right_button_toilets" class="rightButton">❯</button>
         </div>
     </div>
 </div>
@@ -121,22 +147,38 @@ gleich unter Leute kommen und neue Leute kennenlernen.</p>
     multiple slideshows
 -->
 <script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
+        var slideIndex = 1;
+        showDivs(slideIndex);
 
-    function plusDivs(n) {showDivs(slideIndex += n);}
+        function plusDivs(n) {showDivs(slideIndex += n);}
 
-    function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides_toilets");
-        console.log("toilets:", x.length)
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides_toilets");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
         }
-        x[slideIndex-1].style.display = "block";
-    }
+</script>
+
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_toilets");
+    right_button = document.getElementById("right_button_toilets");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("toilets");
+    right_button.state = left_button.state;
+
+
+    // attach event listener
+    left_button.addEventListener("click", (e) => {e.currentTarget.state.plusDivs(-1);});
+    right_button.addEventListener("click", (e) => {e.currentTarget.state.plusDivs(1);});
+
 </script>
 
 
@@ -256,7 +298,7 @@ es wäre wirklich klasse, wenn ich da auch hingehen könnte.</p>
 <div id="slideshow">
     <div class="grid-container">
         <div class="lbc">
-            <button class="leftButton" onclick="plusDivs(-1)">❮</button>
+            <button id="left_button_slideshow" class="leftButton">❮</button>
         </div>
         
             <div class="slide-item">
@@ -280,7 +322,7 @@ es wäre wirklich klasse, wenn ich da auch hingehen könnte.</p>
             </div>
         
         <div class="rbc">
-            <button class="rightButton" onclick="plusDivs(1)">❯</button>
+            <button id="right_button_slideshow" class="rightButton">❯</button>
         </div>
     </div>
 </div>
@@ -291,22 +333,38 @@ es wäre wirklich klasse, wenn ich da auch hingehen könnte.</p>
     multiple slideshows
 -->
 <script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
+        var slideIndex = 1;
+        showDivs(slideIndex);
 
-    function plusDivs(n) {showDivs(slideIndex += n);}
+        function plusDivs(n) {showDivs(slideIndex += n);}
 
-    function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides_slideshow");
-        console.log("slideshow:", x.length)
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides_slideshow");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
         }
-        x[slideIndex-1].style.display = "block";
-    }
+</script>
+
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_slideshow");
+    right_button = document.getElementById("right_button_slideshow");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("slideshow");
+    right_button.state = left_button.state;
+
+
+    // attach event listener
+    left_button.addEventListener("click", (e) => {e.currentTarget.state.plusDivs(-1);});
+    right_button.addEventListener("click", (e) => {e.currentTarget.state.plusDivs(1);});
+
 </script>
 
 <p>Nach dem gemeinsamen Essen, inklusive intensiver Japanisch-Übung –
