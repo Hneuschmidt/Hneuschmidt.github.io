@@ -1,0 +1,1024 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tokio2</title>
+        <link rel="stylesheet" href="/assets/css/styles.css">
+    </head>
+    <script src="http://localhost:4000/assets/js/slideshow.js"></script>
+    <body>
+        <nav>
+    
+    <a href="/"
+        >
+        Home
+    </a>
+    
+    <a href="/about"
+        >
+        About
+    </a>
+    
+    <a href="/blog.html"
+        >
+        Blog
+    </a>
+    
+</nav>
+
+        <h1>Tokio2</h1>
+<p> 20 Oct 2022 - Hannes </p>
+
+<h2 id="sightseeing">Sightseeing</h2>
+
+<p>Ich hatte unglaublich gutes Timing mit meiner Ankunft in Japan.
+Nicht nur konnte ich gestern zu einer wirklich tollen
+Veranstaltung gehen, sondern ich habe auch das Glück dass heute (18.09.)
+ein Feiertag ist: Tag des Respekts für die Älteren (敬老の日).
+Dadurch hat Moeka Zeit, den ganzen Tag mit mir durch Tokio
+zu laufen und mir allerlei Sehenswürdigkeiten zu zeigen.</p>
+
+<p>Wir treffen uns bei Asakusa (浅草). Dort steht der 
+<a href="https://www.gotokyo.org/en/spot/15/index.html">Senso-ji</a> (浅草寺) Tempel,
+eine der bekanntesten Sehenswürdigkeiten in Tokio und Tokios
+ältester Tempel.
+Etwas vorgelagert steht ein großes Tor (Kaminari-mon, 雷門) mit einem
+gigantischen Lampion in der Mitte und zwei Shinto-Gottheiten als Wächtern
+an beiden Seiten. Dies ist ein gutes Beispiel für die in Japan
+sehr verbreitete Vermischung und räumliche Nähe von buddhistischen
+und shintoistischen Einrichtungen.
+Wir schlendern durch die Fußgängerzone zwischen Tor und Tempel und bewundern
+dabei die vielen Souvenirs und typischen Leckereien, die man dort kaufen
+kann.</p>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_asakusa {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="asakusa">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_asakusa" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_asakusa" src="/assets/images/2022-10-20-tokio2/asakusa.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_asakusa" src="/assets/images/2022-10-20-tokio2/sensooji_tor.JPG" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_asakusa" src="/assets/images/2022-10-20-tokio2/sensooji_sonne.JPG" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_asakusa" src="/assets/images/2022-10-20-tokio2/pagode.JPG" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_asakusa" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_asakusa" id="desc_asakusa">
+        Die Straße zwischen dem Tor und dem Tempel beherbergt eine Menge Souvenir- und Essensläden.
+      </p>
+    
+    <p class="descSlideShow_asakusa" id="desc_asakusa">
+        Links und rechts von der Laterne kann man zwei der Wächter sehen.
+      </p>
+    
+    <p class="descSlideShow_asakusa" id="desc_asakusa">
+        Senso-ji in seiner vollen Pracht.
+      </p>
+    
+    <p class="descSlideShow_asakusa" id="desc_asakusa">
+        
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_asakusa");
+    right_button = document.getElementById("right_button_asakusa");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("asakusa");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<p>Ich kann mir gut vorstellen, dass hier alles sehr anders aussehen würde,
+wenn ausländische Touristen ins Land kommen könnten.
+Es ist trotzdem recht voll, aber fast alle Gäste sind Japaner
+und offenbar sind einige Geschäfte weniger offen, als es sonst
+der Fall wäre.
+Ich erwerbe kleine Gebäckstücke, Ningyouyaki (人形焼), die recht detailliert
+verschiedene Gesichter, Tiere und Gebäude darstellen.
+Gefüllt sind sie mit einer süßen Bohnenpaste, die hier für viele Süßspeisen
+verwendet wird.</p>
+
+<div class="single-image">
+    <img class="big_img" src="/assets/images/2022-10-20-tokio2/ningyouyaki.jpeg" height="" />
+    <p class="descriptionSingleImage">
+        Ningyouyaki. Mit einer Paste aus roten Bohnen gefüllt -- sehr süß!.
+Bitte das 卍 nicht falsch interpretieren, es wird auch auf Karten
+benutzt um buddhistische Tempel zu markieren.
+    </p>
+</div>
+
+<p>Im Tempel erklärt mir Moeka, wie man richtig
+<a href="https://www.japan-guide.com/e/e2057.html">Respekt zeigt [en]</a>.
+Das Ritual unterscheided sich nur wenig zwischen einem Shinto Schrein und
+einem buddhistischen Tempel. Am Schrein klatscht man zweimal in die Hände
+um die Aufmerksamkeit der Gottheiten zu bekommen. Das ist beim Tempel nicht
+nötig. Ansonsten gilt:</p>
+
+<ul>
+  <li>Eine Münze in die Opferbox werfen</li>
+  <li>Zwei Mal verbeugen</li>
+  <li>Zwei Mal klatschen (nur Schrein)</li>
+  <li>Beten</li>
+  <li>Noch einmal verbeugen</li>
+</ul>
+
+<p>Als wir den Tempel wieder verlassen wollen, werden wir vom tropischen
+Regen aufgehalten. Ein sehr starker <a href="https://en.wikipedia.org/wiki/Typhoon_Nanmadol_(2022)">Taifun [en]</a> ist momentan im Anmarsch und wir sehen
+hier wohl einen entfernten Ausläufer davon.
+Ich habe wahrscheinlich noch nie so starke Regenfälle gesehen.
+Überraschend ist auch, dass die Wolken den Himmel kaum abdunkeln und
+die Sonne manchmal auch durchschaut.</p>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_rain {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="rain">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_rain" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_rain" src="/assets/images/2022-10-20-tokio2/sensooji.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_rain" src="/assets/images/2022-10-20-tokio2/sensooji_regen.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_rain" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_rain" id="desc_rain">
+        Zum Glück bietet uns der Tempel Schutz vor dem Taifun. Im Hintergrund sieht man die Rückseite des Tors.
+      </p>
+    
+    <p class="descSlideShow_rain" id="desc_rain">
+        Zum Glück bietet uns der Tempel Schutz vor dem Taifun. Im Hintergrund sieht man die Rückseite des Tors.
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_rain");
+    right_button = document.getElementById("right_button_rain");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("rain");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<p>Zum Glück können wir geschützt unter dem Dach des Tempels abwarten
+und nach weniger als einer halben Stunde ist es auch wieder vorbei.
+Zum Mittag gibt es Soba (そば), Buchweizennudeln in Suppe, mit Tempura
+drauf. Richtig lecker!</p>
+
+<div class="single-image">
+    <img class="big_img" src="/assets/images/2022-10-20-tokio2/soba.jpg" height="" />
+    <p class="descriptionSingleImage">
+        Soba mit Tempura. (Internetbild, aber sehr vergleichbar)
+    </p>
+</div>
+
+<p>Unser nächstes Ziel ist der Stadtteil Shibuya (渋谷区), bekannt als eines der Ausgehviertel Tokios. 
+Sehr bekannt ist auch die Kreuzung direkt vor dem U-Bahnhof Shibuya. Als
+(eine der) meistbenutzte(n) Kreuzung(en) der Welt strömen bis zu 3000 Menschen
+pro Grünphase von einer Seite zur anderen (<a href="https://en.wikipedia.org/wiki/Shibuya#Sightseeing_and_historic_sites">Wikipedia [en]</a>).
+Der Effekt ist besonders beeindruckend, da die Ampeln für Fußgänger in alle Richtugen
+gleichzeitig grün werden. Dies ermöglicht auch das <a href="https://de.wikipedia.org/wiki/Diagonalqueren">Diagonalqueren [de]</a>.
+Diese Art der Kreuzung gibt es in Japan recht häufig. Wenn es keine Quermarkierung
+gibt, führt das bei mir manchmal zu Verwirrung, weil mir nicht klar ist,
+ob ich irgendwo einen Knopf übersehen habe, oder warum die Ampel
+für Fußgänger nicht grün wird, wenn Autos gerade nur nur parallel fahren können.</p>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_shibuya {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="shibuya">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_shibuya" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_shibuya" src="/assets/images/2022-10-20-tokio2/shibuya.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_shibuya" src="/assets/images/2022-10-20-tokio2/regenschirme.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_shibuya" src="/assets/images/2022-10-20-tokio2/shibuya_steins_gate.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_shibuya" src="/assets/images/2022-10-20-tokio2/shibuya_top_view.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_shibuya" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_shibuya" id="desc_shibuya">
+        Alle Leute strömen auf einmal auf die Kreuzung
+      </p>
+    
+    <p class="descSlideShow_shibuya" id="desc_shibuya">
+        Blick aus dem angeblich 'busiest' Starbucks der Welt
+      </p>
+    
+    <p class="descSlideShow_shibuya" id="desc_shibuya">
+        Shibuya-Kreuzung als Fanart für den Anime/Manga SteinsGate
+      </p>
+    
+    <p class="descSlideShow_shibuya" id="desc_shibuya">
+        Blick von oben (kein eigenes Bild)
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_shibuya");
+    right_button = document.getElementById("right_button_shibuya");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("shibuya");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<!-- this should move the to main css file-->
+<div class="single-video">
+    <video class="video" controls="">
+        <source type="video/mp4" src="/assets/videos/2022-10-20-tokio2/shibuya_vid.mp4" />&lt;/source&gt;
+    </video>
+    <p class="descriptionSingleImage">
+        Crossing the crossing
+    </p>
+</div>
+
+<p>Neben der Kreuzung steht ein Denkmal für den Hund Hachiko (ハチ公).
+Hachiko ist <a href="https://www.spiegel.de/geschichte/hachiko-der-treueste-hund-der-welt-a-1021517.html">weltbekannt [de]</a> als Personifizierung des treuen Hundes, 
+weil er sein Herrchen jeden Tag am Shibuya U-Bahnhof abholen kam, und das 
+bis 10 Jahre nachdem das Herrchen verstorben war.</p>
+
+<div class="single-image">
+    <img class="big_img" src="/assets/images/2022-10-20-tokio2/hachiko.jpg" height="" />
+    <p class="descriptionSingleImage">
+        Ein paar Deutsche haben für für uns das Foto gemacht
+    </p>
+</div>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_shibuya2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="shibuya2">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_shibuya2" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_shibuya2" src="/assets/images/2022-10-20-tokio2/shibuya_moeka.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_shibuya2" src="/assets/images/2022-10-20-tokio2/shibuya_food.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_shibuya2" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_shibuya2" id="desc_shibuya2">
+        Mein Tourguide
+      </p>
+    
+    <p class="descSlideShow_shibuya2" id="desc_shibuya2">
+        Hier reihen sich Restaurants aneinander, jedes ist auf das typische Essen einer anderen Region Japans spezialisiert
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_shibuya2");
+    right_button = document.getElementById("right_button_shibuya2");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("shibuya2");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<p>Nachdem wir in Shibuya die intensivste Stadterfahrung voller Menschen
+mitgenommen haben, machen wir uns als nächstes zu einem viel
+Ruhigeren Ort auf: Dem Schrein 
+<a href="https://www.meijijingu.or.jp/en/ \[en, jp\]">Meiji-jingu</a> (明治神宮),
+welcher der Seele des historisch wichtigen Kaisers Meiji (1852–1912)
+und seiner Frau gewidmet ist.
+Der Schrein ist von einem beeindruckend großen Park umgeben, den ich
+so relativ zentral in Tokio überhaupt nicht erwartet hätte.
+Man kann kaum merken, dass man in einer gigantischen Stadt ist,
+wenn man unter den riesigen 
+<a href="https://de.wikipedia.org/wiki/Torii">Torii [de]</a> hindurch die 
+Parkstraße entlangläuft. Die nach dem Regen herausgekommene Sonne gibt der
+Szene etwas magisches. Überall steigt Dampf auf und man kann sich
+gut vorstellen, dass sich die 
+<a href="https://de.wikipedia.org/wiki/Kami">Kami [de]</a> hier wohlfühlen.
+Für mich ist Meiji-jingu das Highlight unter den vielen tollen Orten,
+die wir heute gesehen haben.</p>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_meiji {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="meiji">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_meiji" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_tor.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_weg.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_wald.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_sake.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_kind.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_full.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_meiji" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_meiji" id="desc_meiji">
+        Im Park stehen ein paar der größten Torii-Tore Tokios
+      </p>
+    
+    <p class="descSlideShow_meiji" id="desc_meiji">
+        Die beiden Wege an der Seite sind für die Menschen. In der Mitte soll man nicht gehen, der Teil der Straße ist für die Kami! Queren ist aber erlaubt.
+      </p>
+    
+    <p class="descSlideShow_meiji" id="desc_meiji">
+        Man würde nie auf die Idee kommen in einem der größten urbanen Gebieten der Welt zu sein. Die Zikaden schreien wie verrückt
+      </p>
+    
+    <p class="descSlideShow_meiji" id="desc_meiji">
+        Es werden große Mengen Sake geopfert. Auf der anderen Seite des Weges gibt es noch so eine ähnliche Stätte mit Weinfässern
+      </p>
+    
+    <p class="descSlideShow_meiji" id="desc_meiji">
+        Der eigentliche Schrain. Wahrscheinlich des etwas wechselhaften Wetters war es heute gar nicht voll. Großes Glück!
+      </p>
+    
+    <p class="descSlideShow_meiji" id="desc_meiji">
+        
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_meiji");
+    right_button = document.getElementById("right_button_meiji");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("meiji");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<p>Nach einem kleinen Abstecher in die Popkultur-Ecke von Tokio – eine 
+sehr lebendige Szene, die es sich sicher mehr zu erforschen lohnt –
+gehen wir noch zusammen mit Kengo Abendessen.</p>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_harajuku {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="harajuku">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_harajuku" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_harajuku" src="/assets/images/2022-10-20-tokio2/harajuku_station.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_harajuku" src="/assets/images/2022-10-20-tokio2/harajuku_street.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_harajuku" src="/assets/images/2022-10-20-tokio2/harajuku_eis.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_harajuku" src="/assets/images/2022-10-20-tokio2/harajuku_philosophy.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_harajuku" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_harajuku" id="desc_harajuku">
+        Schon am Bahnhof kann man erkennen, dass hier Popkultur eine wichtige Rolle spielt.
+      </p>
+    
+    <p class="descSlideShow_harajuku" id="desc_harajuku">
+        Eine Straße voller Leckereien und sehr interessanten Kleidungsstücken.
+      </p>
+    
+    <p class="descSlideShow_harajuku" id="desc_harajuku">
+        Internationales Flair.
+      </p>
+    
+    <p class="descSlideShow_harajuku" id="desc_harajuku">
+        
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_harajuku");
+    right_button = document.getElementById("right_button_harajuku");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("harajuku");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<p>Heute essen wir Okonomiyaki (お好み焼き). Das ist eine Art Pfannkuchen, dessen Basisteig
+zusätlich zu Mehl und Brühe noch gehackten Kohl enthält.
+Die besondere “Okonomi”-Soße und die tanzenden Katsubushi(鰹節) 
+(Flocken von getrocknetem Bonito) machen den besonderen Charakter
+von Okonomiyaki aus.
+Da es überall im Restaurant sehr nach Kohl riecht,
+kann man seine Taschen in den Sitzbänken einigermaßen
+geruchssicher verstauen.
+Man kann diverse Variationen auf der Teiggrundlage bestellen.
+Wir entscheiden uns für Oktopus und Käse sowie Natto.</p>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_abendessen {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="abendessen">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_abendessen" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_abendessen" src="/assets/images/2022-10-20-tokio2/abendessen_straße.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_abendessen" src="/assets/images/2022-10-20-tokio2/moeka_kengo.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_abendessen" src="/assets/images/2022-10-20-tokio2/moeka_zubereitung1.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_abendessen" src="/assets/images/2022-10-20-tokio2/moeka_zubereitung2.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_abendessen" src="/assets/images/2022-10-20-tokio2/moeka_zubereitung3.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_abendessen" src="/assets/images/2022-10-20-tokio2/okonomiyaki_fertig.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_abendessen" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_abendessen" id="desc_abendessen">
+        In dieser Straße gibt es für hunderte Meter nur (Okonomiyaki- ?) Restaurants. Keine Ahnung wie das wirtschaftlich funktioniert. Sieht aber toll aus!
+      </p>
+    
+    <p class="descSlideShow_abendessen" id="desc_abendessen">
+        Moeka und Kengo haben wirklich dafür gesorgt, dass mein Start in Japan richtig klasse geworden ist. Vielen Dank dafür!
+      </p>
+    
+    <p class="descSlideShow_abendessen" id="desc_abendessen">
+        Erst wird der Teig auf die Plate gegeben...
+      </p>
+    
+    <p class="descSlideShow_abendessen" id="desc_abendessen">
+        ...dann in Form gebracht und gewendet...
+      </p>
+    
+    <p class="descSlideShow_abendessen" id="desc_abendessen">
+        ...und am Ende kommen Okonomi-Soße, Mayonaise, Katsubushi und Kräuter drauf.
+      </p>
+    
+    <p class="descSlideShow_abendessen" id="desc_abendessen">
+        Fertig ist das Abendessen!
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_abendessen");
+    right_button = document.getElementById("right_button_abendessen");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("abendessen");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<p>Besonders ist auch die Zubereitungsart:
+In den Tisch ist eine heiße Platte eingelassen. Man bekommt nicht
+das fertige Gericht, sondern eine Schüssel mit allen Zutaten 
+und ist dann selber für die Zubereitung zuständig.
+Allerdings fragt die Bedienung, ob man es selbst hinbekommt
+oder Hilfe benötigt wird.
+Aber Moeka ist ein Profi!</p>
+
+
+    </body>
+</html>
+

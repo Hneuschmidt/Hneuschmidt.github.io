@@ -5,6 +5,7 @@
         <title>Tokio1</title>
         <link rel="stylesheet" href="/assets/css/styles.css">
     </head>
+    <script src="http://localhost:4000/assets/js/slideshow.js"></script>
     <body>
         <nav>
     
@@ -27,32 +28,6 @@
 
         <h1>Tokio1</h1>
 <p> 13 Oct 2022 - Hannes </p>
-
-<script>
-    class SlideState {
-        constructor(id) {
-            this.slides = document.getElementsByClassName("mySlides_" + id);
-            this.slide_idx = 1;
-            // TODO
-            console.log("Constructed SlideState with id " + id);
-            this.id = id;
-        }
-
-        showDivs(n) {
-            if (n > this.slides.length) {this.slide_idx = 1;}
-            if (n < 1) {this.slide_idx = this.slides.length;}
-            for (var i = 0; i < this.slides.length; i++) {
-                this.slides[i].style.display = "none";
-            }
-            this.slides[this.slide_idx-1].style.display = "block";
-        }
-
-        plusDivs(n) {
-            this.showDivs(this.slide_idx += n);
-            console.log("Called plusDivs(" + n + ") on " + this.id+ " slideshow");
-        }
-    }
-</script>
 
 <h2 id="der-erste-abend">Der erste Abend</h2>
 
@@ -89,8 +64,12 @@ gleich unter Leute kommen und neue Leute kennenlernen.</p>
         width: 100%;
         max-height: 90vh;
         grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
         justify-content: center;
         overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .lbc {
@@ -102,15 +81,16 @@ gleich unter Leute kommen und neue Leute kennenlernen.</p>
         height: 100%;
     }
 
+    .leftButton {
+        justify-self: left;
+    }
+
     .slide-item {
         grid-column: 2;
         grid-row: 1;
-        align-self: center;
-        justify-self: center;
         width: 100%;
         height: 100%;
         overflow: hidden;
-        justify-content: center;
     }
 
     .rbc {
@@ -118,6 +98,11 @@ gleich unter Leute kommen und neue Leute kennenlernen.</p>
         grid-row: 1;
         justify-self: right;
         height: 100%;
+    }
+
+    .mySlides_toilets {
+        margin-left: auto;
+        margin-right: auto;
     }
 </style>
 <div id="toilets">
@@ -138,7 +123,9 @@ gleich unter Leute kommen und neue Leute kennenlernen.</p>
             <button id="right_button_toilets" class="rightButton">❯</button>
         </div>
     </div>
+    
 </div>
+
 
 
 <!-- 
@@ -146,24 +133,6 @@ gleich unter Leute kommen und neue Leute kennenlernen.</p>
     Otherwise slideIndex is global and doesn't work with
     multiple slideshows
 -->
-<script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {showDivs(slideIndex += n);}
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides_toilets");
-            if (n > x.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = x.length}
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex-1].style.display = "block";
-        }
-</script>
-
 <script>
     // initialize buttons
     left_button = document.getElementById("left_button_toilets");
@@ -175,16 +144,21 @@ gleich unter Leute kommen und neue Leute kennenlernen.</p>
     right_button.state = left_button.state;
 
 
-    // attach event listener
-    left_button.addEventListener("click", (e) => {e.currentTarget.state.plusDivs(-1);});
-    right_button.addEventListener("click", (e) => {e.currentTarget.state.plusDivs(1);});
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
 
 </script>
 
 
+<p style="margin-bottom: 1px"> </p>
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fCTKDn3Q8xQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
+<iframe src="https://www.youtube-nocookie.com/embed/fCTKDn3Q8xQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="width: 100%; aspect-ratio: 16 / 9"></iframe>
 </div>
 
 <p>Jetzt, wo ich wieder einigermaßen vorzeigbar bin, mache ich mich auf die Suche
@@ -263,8 +237,12 @@ es wäre wirklich klasse, wenn ich da auch hingehen könnte.</p>
         width: 100%;
         max-height: 90vh;
         grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
         justify-content: center;
         overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .lbc {
@@ -276,15 +254,16 @@ es wäre wirklich klasse, wenn ich da auch hingehen könnte.</p>
         height: 100%;
     }
 
+    .leftButton {
+        justify-self: left;
+    }
+
     .slide-item {
         grid-column: 2;
         grid-row: 1;
-        align-self: center;
-        justify-self: center;
         width: 100%;
         height: 100%;
         overflow: hidden;
-        justify-content: center;
     }
 
     .rbc {
@@ -292,6 +271,11 @@ es wäre wirklich klasse, wenn ich da auch hingehen könnte.</p>
         grid-row: 1;
         justify-self: right;
         height: 100%;
+    }
+
+    .mySlides_slideshow {
+        margin-left: auto;
+        margin-right: auto;
     }
 </style>
 
@@ -325,6 +309,7 @@ es wäre wirklich klasse, wenn ich da auch hingehen könnte.</p>
             <button id="right_button_slideshow" class="rightButton">❯</button>
         </div>
     </div>
+    
 </div>
 
 <!-- 
@@ -332,24 +317,6 @@ es wäre wirklich klasse, wenn ich da auch hingehen könnte.</p>
     Otherwise slideIndex is global and doesn't work with
     multiple slideshows
 -->
-<script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {showDivs(slideIndex += n);}
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides_slideshow");
-            if (n > x.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = x.length}
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex-1].style.display = "block";
-        }
-</script>
-
 <script>
     // initialize buttons
     left_button = document.getElementById("left_button_slideshow");
@@ -361,9 +328,14 @@ es wäre wirklich klasse, wenn ich da auch hingehen könnte.</p>
     right_button.state = left_button.state;
 
 
-    // attach event listener
-    left_button.addEventListener("click", (e) => {e.currentTarget.state.plusDivs(-1);});
-    right_button.addEventListener("click", (e) => {e.currentTarget.state.plusDivs(1);});
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
 
 </script>
 
