@@ -1,4 +1,452 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-22T20:23:20+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Japan Blog</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Tokio2</title><link href="http://localhost:4000/2022/10/20/Tokio2.html" rel="alternate" type="text/html" title="Tokio2" /><published>2022-10-20T00:00:00+09:00</published><updated>2022-10-20T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/20/Tokio2</id><content type="html" xml:base="http://localhost:4000/2022/10/20/Tokio2.html"><![CDATA[<h2 id="sightseeing">Sightseeing</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-06T13:35:10+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Japan Blog</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Yokohama</title><link href="http://localhost:4000/2022/11/06/yokohama.html" rel="alternate" type="text/html" title="Yokohama" /><published>2022-11-06T00:00:00+09:00</published><updated>2022-11-06T00:00:00+09:00</updated><id>http://localhost:4000/2022/11/06/yokohama</id><content type="html" xml:base="http://localhost:4000/2022/11/06/yokohama.html"><![CDATA[<h1 id="yokohama">Yokohama</h1>
+
+<p>Heute (2022/09/20) ist mein letzter Tag in Tokio und leider ist es nicht wie
+gestern ein Feiertag.
+Deshalb muss ich mich heute zum ersten Mal alleine in Japan zurechtfinden.</p>
+
+<p>Zuerst kaufe ich mein Zugticket für morgen. Ich bin sehr gespannt auf den
+japanischen Schnellzug Shinkansen (新幹線).
+Ein Zugtyp, der so bekannt ist, dass gerade ein 
+<a href="https://www.imdb.com/title/tt12593682/">Hollywoodfilm</a> nach ihm 
+benannt worden ist. Außerdem bin ich gespannt, wie einfach es sein wird
+auf Englisch oder Japanisch das richtige Ticket zu bekommen.</p>
+
+<p>Im Ticketcenter am Ueno Bahnhof, der Bahnhof in der Nähe meines Hotels,
+von dem ich direkt nach Sendai fahren kann, schaue ich mich erst einmal
+um und überlege, ob ich lieber versuchen soll das Ticket am Automaten
+zu kaufen (der sicher Englisch spricht), oder am Schalter, wo ich da
+nicht ganz so sicher sein kann.
+Auf der einen Seite ist es eine spannende Herausforderung es auf Japanisch
+zu versuchen, andererseits möchte ich am Ende auch das richtige Ticket
+gekauft haben.</p>
+
+<p>Ein Mitarbeiter des Ticketcenters spricht mich zuerst auf Japanisch an 
+– Offenbar sehe ich so aus als wüsste ich nicht, was zu tun ist – 
+um mir helfen zu können.
+Ich versuche es auf Englisch, aber offenbar versteht er mich nicht.
+Dann kommt die Frage: “Parlez-vous français?” und während ich noch
+darüber nachdenke, was die wahrheitsgemäße Antwort auf diese Frage ist,
+beginnt er mir in tadellosem und sehr schnellen Französisch zu erklären,
+was ich wo kaufen kann und fängt an irgendwelche Dinge in den Automaten
+einzugeben, bis ich die Worte gefunden habe ihm zu sagen, dass ich erst
+morgen fahren will und er aber das heutige Datum eingetippt hat.
+In diesem Fall solle ich das Ticket bitte am Schalter kaufen sagt er
+und verschwindet so schnell, wie er aufgetaucht war.
+Nach dieser etwas desorientierenden Erfahrung stelle ich mich bei
+der Schlange am Schalter an und schaffe es auf Japanisch das richtige Ticket
+zu kaufen.</p>
+
+<p>Mein heutiger Sightseeing-Trip geht nach Yokohama (横浜市).
+Wenn auch keine Städtepartnerschaft, so gibt es doch eine Hafenpartnerschaft
+zwischen Hamburg und der zum Ballungsgebiet Tokio gehörenden Stadt.
+Das Ballungsgebiet um Tokio (manchen Quellen zufolge das Ballungsgebiet mit den
+meisten Einwohnern in der Welt) ist so gigantisch, dass mehrere Millionenstädte
+dazugehören. Yokohama ist die zweitgrößte Stadt Tokios und auf der Karte
+quasi nicht von Tokio zu trennen.
+Kawasaki und Saitama sind die zwei weiteren Millionenstädte in diesem Gebiet.</p>
+
+<p>Man kann von Tokio ganz einfach mit der U-Bahn nach Yokohama fahren.
+Dort angekommen besuche ich mein erstes Hauptziel, die größte Chinatown in Japan.
+Besonders beeindruckend finde ich die reich geschmückten großen Tore an den
+Eingängen zur Chinatown. Ansonsten gibt es dort viele Läden für alles Mögliche
+und vor allem die höchste Dichte an Restaurants, die ich je gesehen habe.</p>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_china {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="china">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_china" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_china" src="/assets/images/2022-11-06-yokohama/chinatown_gate.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_china" src="/assets/images/2022-11-06-yokohama/chinatown_shops.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_china" src="/assets/images/2022-11-06-yokohama/chinatown_gate2.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_china" src="/assets/images/2022-11-06-yokohama/chinatown_temple.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_china" src="/assets/images/2022-11-06-yokohama/windjammer.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_china" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_china" id="desc_china">
+        Zwischen den Betongebäuden fällt so ein Tor ganz schön auf.
+      </p>
+    
+    <p class="descSlideShow_china" id="desc_china">
+        Das ganze Gebiet ist mit kleinen Läden und Ständen gepflastert. Handlesen und andere Wahrsagerei wird auch überall angeboten.
+      </p>
+    
+    <p class="descSlideShow_china" id="desc_china">
+        An jedem Aus-/Eingang steht so ein Tor.
+      </p>
+    
+    <p class="descSlideShow_china" id="desc_china">
+        Im Zentrum der Chinatown findet man einen reich geschmückten Tempel.
+      </p>
+    
+    <p class="descSlideShow_china" id="desc_china">
+        Fast wie zuhause.
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_china");
+    right_button = document.getElementById("right_button_china");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("china");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<p>Unter den ganzen Angeboten wird mein Interesse von einem Bild mit der
+Aufschrift “チャーシューメロンパン” geweckt.
+“チャーシュー” (Chaashuu) ist eine Zubereitungsart von Schweinebauch,
+die zum Beispiel für Ramen oft verwendet wird.
+“メロンパン” (<a href="https://de.wikipedia.org/wiki/Melonenbrot">Melonpan [de]</a>) andererseits ist ein japanisches Süßgebäck aus Mürbeteig (außen) und
+einem luftigen Teig (innen). Wie der Name erahnen lässt, ist oft Melonensirup
+enthalten.
+Die Kombination ist doch ziemlich ungewöhnlich, schmeckt aber deutlich
+besser, als ich erwartet hatte!</p>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_hafen {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="hafen">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_hafen" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_hafen" src="/assets/images/2022-11-06-yokohama/harbour_far.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_hafen" src="/assets/images/2022-11-06-yokohama/harbour_park.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_hafen" src="/assets/images/2022-11-06-yokohama/minato_mirai_red_brick.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_hafen" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_hafen" id="desc_hafen">
+        Ein Blick vom Hafen in Richtung Minato Mirai.
+      </p>
+    
+    <p class="descSlideShow_hafen" id="desc_hafen">
+        Der Hafenpark - bei besserem Wetter sicher sehr beliebt.
+      </p>
+    
+    <p class="descSlideShow_hafen" id="desc_hafen">
+        Minato Mirai mit dem Backstein Lagerhaus.
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_hafen");
+    right_button = document.getElementById("right_button_hafen");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("hafen");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<p>Neben der Chinatown lockt der Hafen in Yokohama.
+Der Hafen ist historisch interessant, weil der Amerikaner Matthew Perry 1853
+in der dortigen Bucht die Öffnung Japans für Handel aus dem Ausland
+erzwungen hat. Japan hatte zuvor für etwa 200 Jahre nur sehr
+<a href="https://de.wikipedia.org/wiki/Abschließung_Japans">eingeschränkte Handelsbeziehungen</a>,
+die sich auf einzelne Häfen, wie etwa Nagasaki, beschränkte.
+In der Folge ist die Stadt Yokohama entstanden und ein früher und wichtiger 
+Handelshafen geworden. Das ist auch der Grund dafür, dass sich viele
+chinesische Händler dort niedergelassen und die Chinatown
+aufgebaut haben.</p>
+
+<div class="single-image">
+    <img class="big_img" src="/assets/images/2022-11-06-yokohama/red_brick_facade.jpg" height="" />
+    <p class="descriptionSingleImage">
+        Die "Speicherstadt" in Yokohama.
+    </p>
+</div>
+
+<p>Eine der größten Sehenswürdigkeiten ist ein Lagerhaus aus rotem Backstein.
+In Japan etwas sehr Ungewöhnliches und es setzt sich stark ab
+vor dem Hintergrund der Beton-Hochhäuser, die sonst das Stadtbild
+dominieren. Ein kleines Abbild der Speicherstadt auf der anderen Seite
+der Welt!
+Das “Cupnoodles Museum” finde ich spannend, aber um nun 16:00 lohnt es sich
+nicht mehr. Offenbar kann man aber sein eigenes Rezept an
+Fertignudeln zusammenstellen und essen. Sind es dann noch Fertignudeln?</p>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_museen {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="museen">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_museen" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_museen" src="/assets/images/2022-11-06-yokohama/cupnoodles.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_museen" src="/assets/images/2022-11-06-yokohama/korean_warship_museum.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_museen" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_museen" id="desc_museen">
+        Eine Idee für den nächsten Besuch!
+      </p>
+    
+    <p class="descSlideShow_museen" id="desc_museen">
+        Noch ein Museum im Hafen von Yokohama mit einem interessanten Thema ist      das "Nordkoreanisches Spionierschiff Museum".
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_museen");
+    right_button = document.getElementById("right_button_museen");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("museen");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<p>Der Heimweg führt durch den schon im Namen futuristischen Distrikt von
+Yokohama: Minato Mirai 21 (みなとみらい21), wörtlich: Zukunftshafen.
+Hier gibt es Wolkenkratzer und viele Luxusautoländen zu bestaunen.</p>
+
+<div class="single-image">
+    <img class="big_img" src="/assets/images/2022-11-06-yokohama/minato_mirai.jpg" height="" />
+    <p class="descriptionSingleImage">
+        Das moderne Stadtentwicklungsprojekt Minato Mirai 21
+    </p>
+</div>
+
+<p>Yokohama hat mir gut gefallen, ich würde gerne noch einmal mit ein
+bisschen mehr Zeit wiederkommen.
+Natürlich ist die Konkurrenz des angrenzenden Tokio sehr stark,
+wenn man schon in der Gegend ist.</p>]]></content><author><name>Hannes</name></author><summary type="html"><![CDATA[Yokohama]]></summary></entry><entry><title type="html">Tokio2</title><link href="http://localhost:4000/2022/10/20/Tokio2.html" rel="alternate" type="text/html" title="Tokio2" /><published>2022-10-20T00:00:00+09:00</published><updated>2022-10-20T00:00:00+09:00</updated><id>http://localhost:4000/2022/10/20/Tokio2</id><content type="html" xml:base="http://localhost:4000/2022/10/20/Tokio2.html"><![CDATA[<h2 id="sightseeing">Sightseeing</h2>
 
 <p>Ich hatte unglaublich gutes Timing mit meiner Ankunft in Japan.
 Nicht nur konnte ich gestern zu einer wirklich tollen
@@ -293,7 +741,7 @@ drauf. Richtig lecker!</p>
 <div class="single-image">
     <img class="big_img" src="/assets/images/2022-10-20-tokio2/soba.jpg" height="" />
     <p class="descriptionSingleImage">
-        Soba mit Tempura. (Internetbild, aber sehr vergleichbar)
+        Soba mit Tempura.
     </p>
 </div>
 
@@ -443,12 +891,117 @@ Hachiko ist <a href="https://www.spiegel.de/geschichte/hachiko-der-treueste-hund
 weil er sein Herrchen jeden Tag am Shibuya U-Bahnhof abholen kam, und das 
 bis 10 Jahre nachdem das Herrchen verstorben war.</p>
 
-<div class="single-image">
-    <img class="big_img" src="/assets/images/2022-10-20-tokio2/hachiko.jpg" height="" />
-    <p class="descriptionSingleImage">
-        Ein paar Deutsche haben für uns das Foto gemacht
-    </p>
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_hachiko {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="hachiko">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_hachiko" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_hachiko" src="/assets/images/2022-10-20-tokio2/hachiko.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_hachiko" src="/assets/images/2022-10-20-tokio2/hachiko_moeka.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_hachiko" src="/assets/images/2022-10-20-tokio2/hachiko_me.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_hachiko" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_hachiko" id="desc_hachiko">
+        Moeka und ich am Hachiko Denkmal
+      </p>
+    
+    <p class="descSlideShow_hachiko" id="desc_hachiko">
+        Wir haben ein paar Deutsche getroffen, die für uns die Fotos gemacht haben
+      </p>
+    
+    <p class="descSlideShow_hachiko" id="desc_hachiko">
+        Wir haben ein paar Deutsche getroffen, die für uns die Fotos gemacht haben
+      </p>
+    
 </div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_hachiko");
+    right_button = document.getElementById("right_button_hachiko");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("hachiko");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
 
 <style>
     .grid-container {
@@ -627,6 +1180,10 @@ die wir heute gesehen haben.</p>
         </div>
         
             <div class="slide-item">
+                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_me.jpg" />
+            </div>
+        
+            <div class="slide-item">
                 <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_tor.jpg" />
             </div>
         
@@ -635,11 +1192,19 @@ die wir heute gesehen haben.</p>
             </div>
         
             <div class="slide-item">
-                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_wald.jpg" />
+                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_wald2.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_sonne.jpg" />
             </div>
         
             <div class="slide-item">
                 <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_sake.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_wein.jpg" />
             </div>
         
             <div class="slide-item">
@@ -660,6 +1225,10 @@ die wir heute gesehen haben.</p>
       </p>
     
     <p class="descSlideShow_meiji" id="desc_meiji">
+        Im Park stehen ein paar der größten Torii-Tore Tokios
+      </p>
+    
+    <p class="descSlideShow_meiji" id="desc_meiji">
         Die beiden Wege an der Seite sind für die Menschen. In der Mitte soll man nicht gehen, der Teil der Straße ist für die Kami! Queren ist aber erlaubt.
       </p>
     
@@ -668,11 +1237,23 @@ die wir heute gesehen haben.</p>
       </p>
     
     <p class="descSlideShow_meiji" id="desc_meiji">
-        Es werden große Mengen Sake geopfert. Auf der anderen Seite des Weges gibt es noch so eine ähnliche Stätte mit Weinfässern
+        Durch den Dampf sieht alles etwas unwirklich aus.
+      </p>
+    
+    <p class="descSlideShow_meiji" id="desc_meiji">
+        Es werden große Mengen Sake geopfert.
+      </p>
+    
+    <p class="descSlideShow_meiji" id="desc_meiji">
+        Auf der anderen Seite des Weges gibt es noch so eine ähnliche Stätte mit Weinfässern
       </p>
     
     <p class="descSlideShow_meiji" id="desc_meiji">
         Der eigentliche Schrain. Wahrscheinlich des etwas wechselhaften Wetters war es heute gar nicht voll. Großes Glück!
+      </p>
+    
+    <p class="descSlideShow_meiji" id="desc_meiji">
+        
       </p>
     
     <p class="descSlideShow_meiji" id="desc_meiji">

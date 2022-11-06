@@ -7,6 +7,7 @@
     </head>
     <script src="/assets/js/slideshow.js"></script>
     <body>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <nav>
     
     <a href="/"
@@ -324,7 +325,7 @@ drauf. Richtig lecker!</p>
 <div class="single-image">
     <img class="big_img" src="/assets/images/2022-10-20-tokio2/soba.jpg" height="" />
     <p class="descriptionSingleImage">
-        Soba mit Tempura. (Internetbild, aber sehr vergleichbar)
+        Soba mit Tempura.
     </p>
 </div>
 
@@ -474,12 +475,117 @@ Hachiko ist <a href="https://www.spiegel.de/geschichte/hachiko-der-treueste-hund
 weil er sein Herrchen jeden Tag am Shibuya U-Bahnhof abholen kam, und das 
 bis 10 Jahre nachdem das Herrchen verstorben war.</p>
 
-<div class="single-image">
-    <img class="big_img" src="/assets/images/2022-10-20-tokio2/hachiko.jpg" height="" />
-    <p class="descriptionSingleImage">
-        Ein paar Deutsche haben für uns das Foto gemacht
-    </p>
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_hachiko {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="hachiko">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_hachiko" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_hachiko" src="/assets/images/2022-10-20-tokio2/hachiko.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_hachiko" src="/assets/images/2022-10-20-tokio2/hachiko_moeka.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_hachiko" src="/assets/images/2022-10-20-tokio2/hachiko_me.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_hachiko" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_hachiko" id="desc_hachiko">
+        Moeka und ich am Hachiko Denkmal
+      </p>
+    
+    <p class="descSlideShow_hachiko" id="desc_hachiko">
+        Wir haben ein paar Deutsche getroffen, die für uns die Fotos gemacht haben
+      </p>
+    
+    <p class="descSlideShow_hachiko" id="desc_hachiko">
+        Wir haben ein paar Deutsche getroffen, die für uns die Fotos gemacht haben
+      </p>
+    
 </div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_hachiko");
+    right_button = document.getElementById("right_button_hachiko");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("hachiko");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
 
 <style>
     .grid-container {
@@ -658,6 +764,10 @@ die wir heute gesehen haben.</p>
         </div>
         
             <div class="slide-item">
+                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_me.jpg" />
+            </div>
+        
+            <div class="slide-item">
                 <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_tor.jpg" />
             </div>
         
@@ -666,11 +776,19 @@ die wir heute gesehen haben.</p>
             </div>
         
             <div class="slide-item">
-                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_wald.jpg" />
+                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_wald2.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_sonne.jpg" />
             </div>
         
             <div class="slide-item">
                 <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_sake.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_meiji" src="/assets/images/2022-10-20-tokio2/meiji_wein.jpg" />
             </div>
         
             <div class="slide-item">
@@ -691,6 +809,10 @@ die wir heute gesehen haben.</p>
       </p>
     
     <p class="descSlideShow_meiji" id="desc_meiji">
+        Im Park stehen ein paar der größten Torii-Tore Tokios
+      </p>
+    
+    <p class="descSlideShow_meiji" id="desc_meiji">
         Die beiden Wege an der Seite sind für die Menschen. In der Mitte soll man nicht gehen, der Teil der Straße ist für die Kami! Queren ist aber erlaubt.
       </p>
     
@@ -699,11 +821,23 @@ die wir heute gesehen haben.</p>
       </p>
     
     <p class="descSlideShow_meiji" id="desc_meiji">
-        Es werden große Mengen Sake geopfert. Auf der anderen Seite des Weges gibt es noch so eine ähnliche Stätte mit Weinfässern
+        Durch den Dampf sieht alles etwas unwirklich aus.
+      </p>
+    
+    <p class="descSlideShow_meiji" id="desc_meiji">
+        Es werden große Mengen Sake geopfert.
+      </p>
+    
+    <p class="descSlideShow_meiji" id="desc_meiji">
+        Auf der anderen Seite des Weges gibt es noch so eine ähnliche Stätte mit Weinfässern
       </p>
     
     <p class="descSlideShow_meiji" id="desc_meiji">
         Der eigentliche Schrain. Wahrscheinlich des etwas wechselhaften Wetters war es heute gar nicht voll. Großes Glück!
+      </p>
+    
+    <p class="descSlideShow_meiji" id="desc_meiji">
+        
       </p>
     
     <p class="descSlideShow_meiji" id="desc_meiji">
