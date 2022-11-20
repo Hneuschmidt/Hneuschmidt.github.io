@@ -1,0 +1,710 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ankunft In Sendai</title>
+        <link rel="stylesheet" href="/assets/css/styles.css">
+    </head>
+    <script src="/assets/js/slideshow.js"></script>
+    <body>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+        <nav>
+    
+    <a href="/"
+        >
+        Home
+    </a>
+    
+    <a href="/about"
+        >
+        About
+    </a>
+    
+    <a href="/blog.html"
+        >
+        Blog
+    </a>
+    
+</nav>
+
+        <h1>Ankunft In Sendai</h1>
+<p> 20 Nov 2022 - Hannes </p>
+
+<h1 id="ankunft-in-sendai">Ankunft in Sendai</h1>
+
+<p>Nachdem ich gestern erfolgreich mein Shinkansen-Ticket erworben habe, ist es
+an der Zeit sich für’s Erste von Tokio zu verabschieden.
+Ich bin sehr gespannt, ob der weltberühmte Shinkansen seinem Ruf
+gerecht werden kann.
+Für knapp 80€ schafft er die ca. 340 km von Tokio nach Sendai in nur
+90 Minuten.</p>
+
+<p>Ich bin mit etwas Puffer zum Bahnhof gekommen und beobachte,
+wie alle 20 Minuten ein Shinkansen Richtung Norden fährt,
+natürlich auf die Minute pünktlich.
+Laut meinem Buch “Japan für die Hosenstasche” ist es noch spannender, die 
+Abfahrten am Tokioter Hauptbahnhof zu beobachten. Dort gibt es ein
+7 minütiges Reinigungsritual bei dem, passend zum Zug,
+in Höchstgeschwindigkeit die nächste Fahrt vorbereited wird.
+Ueno ist nur eine Zwischenstation,
+deshalb bekomme ich davon leider nichts mit.</p>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_zug {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="zug">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_zug" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_zug" src="/assets/images/2022-11-20-ankunft-in-sendai/bahnsteig.JPG" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_zug" src="/assets/images/2022-11-20-ankunft-in-sendai/shinkansen.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_zug" src="/assets/images/2022-11-20-ankunft-in-sendai/zugblick.JPG" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_zug" src="/assets/images/2022-11-20-ankunft-in-sendai/shinkansen_air.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_zug" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_zug" id="desc_zug">
+        Alle 20 Minuten fährt ein Zug ein. Meiner ist der nächste.
+      </p>
+    
+    <p class="descSlideShow_zug" id="desc_zug">
+        Mein Zug ist da!
+      </p>
+    
+    <p class="descSlideShow_zug" id="desc_zug">
+        Tokio erstrahlt in seinem wundervollen Grau.
+      </p>
+    
+    <p class="descSlideShow_zug" id="desc_zug">
+        Mit so einer grünen Schlange bin ich gefahren. Das Bild ist überraschender Weise nicht von mir.
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_zug");
+    right_button = document.getElementById("right_button_zug");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("zug");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<p>Die Fahrt selbst ist relativ ereignislos, aber angenehm.
+Der Shinkansen hat gut Beinfreiheit und man sitzt bequem. Es ist allerdings nicht ganz einfach große Gepäckstücke unterzubringen,
+das geht eigentlich nur hinter den Sitzen am Ende des Wagons.
+Dort ist zwar genug Platz für meinen großen Koffer,
+aber auch nur, weil niemand sonst großes Gepäck dabei
+zu haben scheint.</p>
+
+<p>In <a href="https://de.wikipedia.org/wiki/Sendai">Sendai [de]</a> (仙台市) nehme ich die U-Bahn vom Hauptbahnhof zu meinem
+Wohnheim. Die Ticketautomaten funktionieren ähnlich wie die in Tokio
+und sprechen auch Englisch.
+Angekommen am Campus Aobayama (青葉山) bin ich erstmal ziemlich
+beeindruckt davon, wie weiträumig das Gelände ist. Man kann sehr 
+weit sehen und alles sieht sehr neu und schick aus.</p>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_aobayama {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="aobayama">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_aobayama" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_aobayama" src="/assets/images/2022-11-20-ankunft-in-sendai/aobayama_bottom1.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_aobayama" src="/assets/images/2022-11-20-ankunft-in-sendai/campus_fern.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_aobayama" src="/assets/images/2022-11-20-ankunft-in-sendai/campus_night.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_aobayama" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_aobayama" id="desc_aobayama">
+        Auf der rechten Seite sind die verschiedenen Institute in ihren eigenen Gebäuden, auch meins.
+      </p>
+    
+    <p class="descSlideShow_aobayama" id="desc_aobayama">
+        Ein anderer Teil des 'Aobayama' Campus. Die Uni hat noch mindestens 3 weitere Campi.
+      </p>
+    
+    <p class="descSlideShow_aobayama" id="desc_aobayama">
+        Hier ist die U-Bahn station, von der aus man in die Innenstadt fahren kann.
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_aobayama");
+    right_button = document.getElementById("right_button_aobayama");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("aobayama");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<p>Mein Labor soll sich auch auf diesem Campus befinden,
+ich glaube, damit kann ich sehr gut leben.
+Zum Wohnheim geht es ein gutes Stück bergauf, man kann
+es von fast überall auf dem Campus auf dem Hügel tronen sehen.</p>
+
+<div class="single-image">
+    <img class="big_img" src="/assets/images/2022-11-20-ankunft-in-sendai/aobayama_von_fern.jpg" height="" />
+    <p class="descriptionSingleImage">
+        Der erste Blick auf mein Wohnheim!
+    </p>
+</div>
+
+<p>Für das Check-in gibt es erstmal eine 30-minütige Erklärung,
+wie die Dinge in dem Wohnheim funktionieren und was meine
+Rechte und Pflichten sind.
+Ich werde das hier jetzt nicht vollständig wiedergeben,
+aber ein paar Highlights sind:</p>
+
+<ul>
+  <li>Die Studenten leben zu acht in “Units” mit jeweils geteilter
+Küche und Bad.</li>
+  <li>Man soll bitte darauf achten ordentlich zu lüften und die automatische
+Lüftung <strong>niemals</strong> ausschalten. In Japan ist es sehr feucht und sonst schimmelt alles weg.</li>
+  <li>Es gibt einen “self-checkout convenience store” neben dem Verwaltungsbüro.
+Dort bekommt man Getränke, Snacks und
+<a href="https://de.wikipedia.org/wiki/Bent%C5%8D">Bento-Boxen [de]</a> 24/7.</li>
+</ul>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_wohnheim {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="wohnheim">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_wohnheim" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_wohnheim" src="/assets/images/2022-11-20-ankunft-in-sendai/zimmer_tuer.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_wohnheim" src="/assets/images/2022-11-20-ankunft-in-sendai/zimmer_fenster.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_wohnheim" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_wohnheim" id="desc_wohnheim">
+        Mein neues Zuhause. Schreibtisch, Regal, Schrank und Bett. Plastikgeschirr inklusive.
+      </p>
+    
+    <p class="descSlideShow_wohnheim" id="desc_wohnheim">
+        Ich habe sogar einen eigenen kleinen Balkon.
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_wohnheim");
+    right_button = document.getElementById("right_button_wohnheim");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("wohnheim");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<p>Die Unit selbst ist angenehm sauber, mit Ausnahme des Herds,
+der mit einer recht dicken Ölschicht bedeckt zu sein scheint. Naja.
+Aber alles ist modern, die Küche scheint gut ausgestattet zu sein
+und das Bad ist sehr sauber.
+Das Zimmer selbst ist natürlich nicht der Luxus, den ich von
+zuhause gewöhnt bin, aber es ist groß genug, und viele Ansprüche
+oder Erwartungen habe ich auch nicht.</p>
+
+<p>Als ich einziehe, ist offenbar keiner meiner Mitbewohner zuhause.
+Etwa eine Stunde nach meiner Ankunft im Wohnheim treffe ich
+einen anderen Gaststudenten, der gerade die gleiche Schulung
+durchgemacht hat.
+Ich war gerade dabei den Wohnheims-Conbini (= “convenience store”)
+zu erkunden. Julian kommt aus Aachen wohnt im Gebäude nebenan.
+Noch wundere ich mich über den Zufall, ausgerechnet einen
+anderen deutschen Studenten getroffen zu haben,
+es wird sich aber noch herausstellen, dass wir
+in diesem Jahr die überwiegende Mehrheit der Gaststudenten
+stellen, wenn man einmal von Chinesen absieht.</p>
+
+<div class="single-image">
+    <img class="big_img" src="/assets/images/2022-11-20-ankunft-in-sendai/aobayama_von_oben.jpg" height="" />
+    <p class="descriptionSingleImage">
+        Der Blick von direkt vor dem Wohnheim. Man hat einen richtig guten Blick auf den Campus.
+    </p>
+</div>
+
+<p>Um ein bisschen die Gegend zu erkunden,
+gehe ich noch bevor es dunkel wird zu der Ruine
+von der Burg Sendai, die sich nicht so weit von
+dem Wohnheim befindet.
+Wie ich schon vorher gehört hatte, ist von der Burg selbst nicht mehr
+viel übrig. Es stehen nur noch (bzw. wieder) einige der Außenmauern,
+aber vor allen Dingen hat man einen richtig guten Ausblick über die Stadt!
+Dass ich zufällig kurz vor Sonnenuntergang angekommen bin, trägt
+zur Stimmung bei.</p>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_Castle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="Castle">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_Castle" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_Castle" src="/assets/images/2022-11-20-ankunft-in-sendai/castle_berge_rotated_copy.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_Castle" src="/assets/images/2022-11-20-ankunft-in-sendai/castle_stadt.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_Castle" src="/assets/images/2022-11-20-ankunft-in-sendai/castle_sun_down_rotated_copy.jpg" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_Castle" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_Castle" id="desc_Castle">
+        
+      </p>
+    
+    <p class="descSlideShow_Castle" id="desc_Castle">
+        
+      </p>
+    
+    <p class="descSlideShow_Castle" id="desc_Castle">
+        
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_Castle");
+    right_button = document.getElementById("right_button_Castle");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("Castle");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<p>Der Gründer der Burg Sendai, eine insbesondere in Sendai berühmte
+historische Persönlichkeit, <a href="https://de.wikipedia.org/wiki/Date_Masamune">Masamune Date [de]</a>, hat hier eine große
+und bekannte Reiterstatue.
+Heute scheint er allerdings nicht da zu sein,
+nur der eingerüstete Sockel steht da.
+Gerüchten zufolge ist die Statue beim großen Erdbeben im März
+in Schieflage geraten und wird jetzt wahrscheinlich restauriert.
+Mal sehen, ob er im nächsten halben Jahr wieder aufgestellt wird.</p>
+
+<style>
+    .grid-container {
+        display: grid;
+        width: 100%;
+        max-height: 90vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        justify-content: center;
+        overflow: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lbc {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+        height: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .leftButton {
+        justify-self: left;
+    }
+
+    .slide-item {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rbc {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: right;
+        height: 100%;
+    }
+
+    .mySlides_Date {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div id="Date">
+    <div class="grid-container">
+        <div class="lbc">
+            <button id="left_button_Date" class="leftButton">❮</button>
+        </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_Date" src="/assets/images/2022-11-20-ankunft-in-sendai/date_wiki.jpg" />
+            </div>
+        
+            <div class="slide-item">
+                <img class="mySlides_Date" src="/assets/images/2022-11-20-ankunft-in-sendai/date_now.png" />
+            </div>
+        
+        <div class="rbc">
+            <button id="right_button_Date" class="rightButton">❯</button>
+        </div>
+    </div>
+    
+    <p class="descSlideShow_Date" id="desc_Date">
+        So sähe die Statue aus, wenn Herr Date zuhause wäre.
+      </p>
+    
+    <p class="descSlideShow_Date" id="desc_Date">
+        Aktuell ist er aber leider nicht da.
+      </p>
+    
+</div>
+
+<!-- 
+    We need to create an event listener instead.
+    Otherwise slideIndex is global and doesn't work with
+    multiple slideshows
+-->
+<script>
+    // initialize buttons
+    left_button = document.getElementById("left_button_Date");
+    right_button = document.getElementById("right_button_Date");
+
+    // TODO can live somewhere else!
+
+    left_button.state = new SlideState("Date");
+    right_button.state = left_button.state;
+
+
+    // attach event listeners
+    ["click", "touchend"].forEach(
+        evt => {
+            left_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(-1));
+            right_button.addEventListener(evt, (e) => e.currentTarget.state.plusDivs(1)); 
+        }
+    )
+
+
+</script>
+
+<p>Der erste Eindruck von Sendai ist gut. Man entkommt dem etwas
+zu gigantischen Tokio, ist aber trotzdem in einer <em>richtigen Stadt</em>.
+Die Burg Sendai ist weniger als 30 Minuten zu Fuß vom dem am Stadtrand
+gelegenen Wohnheim und bietet eine wirklich tolle Aussicht auf die Stadt.
+Der Campus ist toll und das Wohnheim macht auch einen guten Eindruck,
+wenn es auch etwas ausgestorben wirkt aktuell.</p>
+
+<div class="single-image">
+    <img class="big_img" src="/assets/images/2022-11-20-ankunft-in-sendai/campus_real_night.jpg" height="" />
+    <p class="descriptionSingleImage">
+        Auch bei Nacht bietet sich ein toller Blick auf den Campus!
+    </p>
+</div>
+
+
+
+    </body>
+</html>
+
